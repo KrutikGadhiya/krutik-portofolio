@@ -38,7 +38,7 @@ export default function Hero() {
   return (
     <div class="container">
       <h1 class="heading">Hello my name is <span>Krutik Gadhiya.</span></h1>
-      <p class="para">Want to <span>connect?</span></p>
+      <p class="para">Want to <a href="#contact">connect?</a></p>
       <p class="para">I am an web Developer. sort of :)</p>
       <a href="#introduction"><svg id="scroll-down" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
         height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">

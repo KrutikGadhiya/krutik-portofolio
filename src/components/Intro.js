@@ -41,6 +41,7 @@ export default function Intro() {
       <div class="circle large shade3"></div>
       <div class="circle medium shade4"></div>
       <div class="circle small shade5"></div>
+
     </section>
   )
 }

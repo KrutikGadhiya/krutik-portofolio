@@ -80,6 +80,11 @@ html {
 	transform: translateY(3em);
 	animation: subTitle 2s ease calc(6s + 0.5s) forwards;
 }
+.container p a {
+	color: #3344ff;
+	text-decoration: none;
+	font-weight: 600;
+}
 .container svg {
 	position: absolute;
 	bottom: 1em;
@@ -107,6 +112,7 @@ html {
 	z-index: 1;
 	overflow: hidden;
 	color: #fff;
+	/* cursor: url("components/img/html5-brands\ 2.png"), auto; */
 }
 .intro p {
 	font-family: Roboto, sans-serif;
@@ -150,11 +156,17 @@ html {
 	overflow: hidden;
 	z-index: 1;
 }
+.skills svg {
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
 .skills h1 {
 	font-family: Roboto, sans-serif;
-	font-size: 2.5em;
+	font-size: 3em;
 	color: #fff;
-	text-shadow: 3px 3px #cc6600;
+	text-shadow: 3px 3px #3344ff;
 }
 .skill-container {
 	width: 100%;
@@ -229,7 +241,15 @@ html {
 	position: absolute;
 	border-radius: 50%;
 	background: white;
-	animation: ripple 15s infinite;
+	/* animation: ripple 15s infinite; */
+	box-shadow: 0px 0px 1px 0px #508fb9;
+	z-index: -1;
+}
+.square {
+	position: absolute;
+	/* border-radius: 50%; */
+	background: white;
+	/* animation: ripple 15s infinite; */
 	box-shadow: 0px 0px 1px 0px #508fb9;
 	z-index: -1;
 }
@@ -237,61 +257,49 @@ html {
 	width: 200px;
 	height: 200px;
 	left: -100px;
-	bottom: -100px;
+	top: -100px;
 }
 .medium {
 	width: 400px;
 	height: 400px;
 	left: -200px;
-	bottom: -200px;
+	top: -200px;
 }
 .large {
 	width: 600px;
 	height: 600px;
 	left: -300px;
-	bottom: -300px;
+	top: -300px;
 }
 .xlarge {
 	width: 800px;
 	height: 800px;
 	left: -400px;
-	bottom: -400px;
+	top: -400px;
 }
 .xxlarge {
 	width: 1000px;
 	height: 1000px;
 	left: -500px;
-	bottom: -500px;
+	top: -500px;
 }
-.small1 {
+.large1 {
 	width: 200px;
 	height: 200px;
 	right: -100px;
 	bottom: -100px;
 }
-.medium1 {
+.xlarge1 {
 	width: 400px;
 	height: 400px;
 	right: -200px;
 	bottom: -200px;
 }
-.large1 {
+.xxlarge1 {
 	width: 600px;
 	height: 600px;
 	right: -300px;
 	bottom: -300px;
-}
-.xlarge1 {
-	width: 800px;
-	height: 800px;
-	right: -400px;
-	bottom: -400px;
-}
-.xxlarge1 {
-	width: 1000px;
-	height: 1000px;
-	right: -500px;
-	bottom: -500px;
 }
 .shade1 {
 	opacity: 0.2;
@@ -388,6 +396,7 @@ html {
 	}
 }
 
+/* Project start */
 .projects {
 	width: 100%;
 	min-height: 100vh;
@@ -396,11 +405,20 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	position: relative;
+	z-index: 1;
+}
+.projects svg {
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	z-index: -1;
 }
 .projects h1 {
-	font-size: 2.5em;
+	font-size: 3em;
 	padding: 0.5em 0;
-	text-shadow: 3px 3px #fff333;
+	color: #fff;
+	text-shadow: 3px 3px #cc6600;
 	font-family: Roboto, sans-serif;
 }
 .projects h2 {
@@ -461,3 +479,105 @@ html {
 		padding: 0;
 	}
 }
+/* Project end */
+/* Contact start */
+.contact {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-direction: column;
+	padding: 2em;
+	font-family: Roboto, sans-serif;
+	background: #3344ff;
+	position: relative;
+	z-index: 1;
+}
+.contact svg {
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+}
+.contact h1 {
+	font-size: 3em;
+	text-shadow: 3px 3px #ffbb00;
+}
+.contact .contactform {
+	width: 60%;
+	padding: 1em;
+	margin-top: 2em;
+}
+.contact .contactform form {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.contact .contactform form input,
+.contact .contactform form textarea {
+	width: 100%;
+	font-size: 1.5em;
+	padding: 0.5em;
+	border: 2px solid #6868687c;
+	border-radius: 0.25em;
+	outline: none;
+	margin-bottom: 1em;
+	resize: vertical;
+	transition: 0.5s ease;
+	cursor: none;
+}
+
+.contact .contactform form .formctrl {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-left: 0.5em;
+}
+.contact .contactform form .formctrl label {
+	font-size: 1.5em;
+	font-weight: 500;
+}
+.contact .inputs {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.contact button {
+	font-size: 1.5em;
+	padding: 0.5em 1em;
+	outline: none;
+	border: 2px solid #000;
+	border-radius: 0.25em;
+	transition: 0.5s ease;
+	color: #ff8000;
+	font-weight: 500;
+}
+.contact button:hover {
+	color: #fff;
+	background: #ff8000;
+	cursor: none;
+}
+.contact .contactform form input:focus,
+.contact .contactform form textarea:focus {
+	box-shadow: 0 0 0 5px rgba(255, 128, 0, 0.6);
+}
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2em;
+}
+.social .link {
+	font-size: 3em;
+	margin: 0 0.5em;
+}
+.social .link a {
+	color: #fff;
+	transition: 0.5s ease;
+}
+.social .link a:hover {
+	color: #000;
+}
+/* Contact end */
