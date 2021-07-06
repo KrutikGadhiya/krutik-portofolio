@@ -6,11 +6,27 @@
 	box-sizing: border-box;
 }
 body {
+	width: 100vw;
 	cursor: none;
 	overflow-x: hidden;
 }
 html {
 	scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+	width: 0.6em;
+	height: 0.6em;
+}
+html::-webkit-scrollbar-thumb {
+	background: linear-gradient(#ebe4f7, #fbf4ff);
+	border-radius: 16px;
+	box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%),
+		inset -2px -2px 2px rgb(0 0 0 / 25%);
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+}
+html::-webkit-scrollbar-track {
+	background: #000;
 }
 /* Custom cursor Start */
 .cursor {
@@ -398,7 +414,7 @@ html {
 
 /* Project start */
 .projects {
-	width: 100%;
+	width: 100vw;
 	min-height: 100vh;
 	background: #f0f0f0;
 	font-family: "Open Sans", sans-serif;
@@ -479,10 +495,15 @@ html {
 		padding: 0;
 	}
 }
+@media screen and (max-width: 500px) {
+	.projects h1 {
+		color: rgb(255, 255, 255);
+	}
+}
 /* Project end */
 /* Contact start */
 .contact {
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
@@ -579,5 +600,20 @@ html {
 }
 .social .link a:hover {
 	color: #000;
+}
+@media screen and (max-width: 500px) {
+	.contact .contactform {
+		width: 100%;
+	}
+	.contact .inputs {
+		flex-direction: column;
+	}
+	.contact h1 {
+		color: #2c2c2c;
+	}
+	.contact .contactform form .formctrl label {
+		color: #fff;
+		margin-bottom: 0.125em;
+	}
 }
 /* Contact end */
