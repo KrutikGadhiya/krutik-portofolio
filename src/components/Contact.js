@@ -36,16 +36,6 @@ export default function Contact() {
     }
   }, [])
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    Swal.fire({
-      icon: 'success',
-      title: 'Your Msg Sent...',
-      text: 'Will be replying as soon as possible',
-      footer: '<a style="font-size: 3em;" href="https://www.linkedin.com/in/krutik-gadhiya-21a814190/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>'
-    })
-  }
-
   return (
     <section id='contact' class="contact">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -54,20 +44,21 @@ export default function Contact() {
       </svg>
       <h1 className="heading3">Wana, Contact Me?</h1>
       <div className="contactform">
-        <form method="POST" data-netlify="true" netlify onSubmit={(e) => handleSubmit(e)} >
+        <form name="contact" method="POST" data-netlify="true" onSubmit="submit" >
+          <input type="hidden" name="form-name" value="contact" />
           <div className="inputs">
             <div className="formctrl">
               <label htmlFor="Name">Name</label>
-              <input type="text" name="Name" />
+              <input id="Name" type="text" name="name" />
             </div>
             <div className="formctrl">
               <label htmlFor="Email">Email</label>
-              <input type="email" name="Email" />
+              <input id="Enail" type="email" name="email" />
             </div>
           </div>
           <div className="formctrl">
             <label htmlFor="Message">Message</label>
-            <textarea name="message" id="" cols="30" rows="6" />
+            <textarea id="Message" name="message" cols="30" rows="6" />
           </div>
           <button type="submit" className="button">Submit</button>
         </form>
