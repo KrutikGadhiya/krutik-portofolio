@@ -45,11 +45,11 @@ export default function Contact() {
       <h1 className="heading3">Wana, Contact Me?</h1>
       <div className="contactform">
         <form
-          name="contact me"
+          name="contact-form"
           method="post"
           data-netlify="true"
           git         >
-          <input type="hidden" name="form-name" value="contact me" />
+          <input type="hidden" name="form-name" value="contact-form" />
           <div className="inputs">
             <div className="formctrl">
               <label htmlFor="Name">Name</label>
