@@ -54,7 +54,7 @@ export default function Contact() {
       </svg>
       <h1 className="heading3">Wana, Contact Me?</h1>
       <div className="contactform">
-        <form onSubmit={(e) => handleSubmit(e)} netlify>
+        <form method="POST" data-netlify="true" netlify onSubmit={(e) => handleSubmit(e)} >
           <div className="inputs">
             <div className="formctrl">
               <label htmlFor="Name">Name</label>
