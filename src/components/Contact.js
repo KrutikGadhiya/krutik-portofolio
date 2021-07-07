@@ -44,8 +44,12 @@ export default function Contact() {
       </svg>
       <h1 className="heading3">Wana, Contact Me?</h1>
       <div className="contactform">
-        <form name="contact" method="POST" data-netlify="true" onSubmit="submit" >
-          <input type="hidden" name="form-name" value="contact" />
+        <form
+          name="contact me"
+          method="post"
+          data-netlify="true"
+          git         >
+          <input type="hidden" name="form-name" value="contact me" />
           <div className="inputs">
             <div className="formctrl">
               <label htmlFor="Name">Name</label>
