@@ -29,6 +29,9 @@ html::-webkit-scrollbar-track {
 	background: #000;
 }
 /* Custom cursor Start */
+.swal2-popup {
+	cursor: auto !important;
+}
 .cursor {
 	width: 20px;
 	height: 20px;

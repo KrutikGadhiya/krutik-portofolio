@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Swal from 'sweetalert2';
 
 export default function Contact() {
   useEffect(() => {
@@ -34,6 +35,17 @@ export default function Contact() {
       })
     }
   }, [])
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Swal.fire({
+      icon: 'success',
+      title: 'Your Msg Sent...',
+      text: 'Will be replying as soon as possible',
+      footer: '<a style="font-size: 3em;" href="https://www.linkedin.com/in/krutik-gadhiya-21a814190/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>'
+    })
+  }
+
   return (
     <section id='contact' class="contact">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -42,7 +54,7 @@ export default function Contact() {
       </svg>
       <h1 className="heading3">Wana, Contact Me?</h1>
       <div className="contactform">
-        <form>
+        <form onSubmit={(e) => handleSubmit(e)} netlify>
           <div className="inputs">
             <div className="formctrl">
               <label htmlFor="Name">Name</label>
@@ -57,7 +69,7 @@ export default function Contact() {
             <label htmlFor="Message">Message</label>
             <textarea name="message" id="" cols="30" rows="6" />
           </div>
-          <button className="button">Submit</button>
+          <button type="submit" className="button">Submit</button>
         </form>
       </div>
       <div className="social">
