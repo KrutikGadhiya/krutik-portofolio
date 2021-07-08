@@ -451,11 +451,12 @@ html::-webkit-scrollbar-track {
 	padding: 0 1em 0 0;
 	margin-bottom: 1em;
 }
-.projects img {
+.projects .projimg {
 	border: 3px solid #9e9e9e;
 	border-radius: 0.25em;
 }
-.projects a {
+.projects a,
+.projects .gitlink {
 	text-decoration: none;
 	background: #3344ff;
 	padding: 0.5em 1em;
@@ -463,6 +464,13 @@ html::-webkit-scrollbar-track {
 	border-radius: 0.25em;
 	cursor: none;
 	transition: 0.2s ease-in-out;
+}
+.projects .gitlink {
+	margin-left: 2em;
+	background: #f40057;
+}
+.projects .gitlink:hover {
+	background: #d4004b;
 }
 .projects a:hover {
 	background: #5362ff;
@@ -620,3 +628,10 @@ html::-webkit-scrollbar-track {
 	}
 }
 /* Contact end */
+
+.techgrid {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 1em 0;
+}

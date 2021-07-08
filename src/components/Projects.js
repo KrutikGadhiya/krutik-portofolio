@@ -1,6 +1,44 @@
 import React, { useState, useEffect } from 'react'
 import { toast } from 'react-toastify';
+
+import HTML from './img/html.svg';
+import CSS from './img/css.svg';
+import JS from './img/js.svg';
+import REACT from './img/react.svg';
+import EXPRESS from './img/express.png';
+import CCPP from './img/CC++.png';
+import NODE from './img/nodejs.svg';
+import MONGODB from './img/mongodb.png';
+import PYTHON from './img/python.svg';
+import MATERIALUI from './img/materialui.svg';
 toast.configure();
+
+const techImgs = (tech) => {
+  switch (tech) {
+    case "HTML5":
+      return HTML;
+    case "CSS3":
+      return CSS;
+    case "Java Script":
+      return JS;
+    case "React JS":
+      return REACT;
+    case "Node JS":
+      return NODE;
+    case "MongoDB":
+      return MONGODB;
+    case "Express JS":
+      return EXPRESS;
+    case "C/C++":
+      return CCPP;
+    case "Python":
+      return PYTHON;
+    case "Material UI":
+      return MATERIALUI;
+    default:
+      break;
+  }
+}
 
 export default function Projects() {
   const [projList, setProjList] = useState([]);
@@ -47,10 +85,24 @@ export default function Projects() {
                 <div className="left">
                   <h2 className="para">{project.projectName}</h2>
                   <p>{project.projectDescription}</p>
+                  <h3>Technologies Used :</h3>
+
+                  <div className="techgrid">
+                    {
+                      project.technologies.map((tech, index) => {
+                        return (
+                          <div style={{ margin: '0 0.5em' }} key={index}>
+                            <img width="50px" src={techImgs(tech)} alt={tech} />
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
                   <a href={project.projectLink} target='blank'>Live link  <i class="fas fa-link"></i></a>
+                  <a className="gitlink" href={project.githubLink} target='blank'>Github link  <i class="fas fa-link"></i></a>
                 </div>
                 <div className="right">
-                  <img width="100%" src={project.projectImage} alt="as" />
+                  <img className="projimg" width="100%" src={project.projectImage} alt="as" />
                 </div>
               </div>
             )
@@ -63,7 +115,20 @@ export default function Projects() {
                 <div className="right">
                   <h2>{project.projectName}</h2>
                   <p>{project.projectDescription}</p>
+                  <h3>Technologies Used: </h3>
+                  <div className="techgrid">
+                    {
+                      project.technologies.map((tech, index) => {
+                        return (
+                          <div style={{ margin: '0 0.5em' }} key={index}>
+                            <img width="50px" src={techImgs(tech)} alt={tech} />
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
                   <a href={project.projectLink} target='blank'>Live link  <i class="fas fa-link"></i></a>
+                  <a className="gitlink" href={project.githubLink} target='blank'>Github link  <i class="fas fa-link"></i></a>
                 </div>
               </div>
             )
