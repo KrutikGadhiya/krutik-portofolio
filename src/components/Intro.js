@@ -28,12 +28,11 @@ export default function Intro() {
       <img id="my-image" width="350px" src={myImage} alt="myimage" />
       <div class='text'>
         <p class="para">Hello my name is krutik Gadhiya. I am a web developer currently persuing B-tech IT in
-          charotar university of science and technology. I want to become a Full stack Developer</p>
-        <p class="para">Always eager to learning new inspiring and interesting thing.</p>
-        <p class="para">Also When i am not working either i play minecraft or i spent my time watching <a
-          href="https://www.youtube.com/user/LinusTechTips" target="blank">Linuses</a>, <a
-            href="https://www.youtube.com/user/duncan33303" target="blank">Austin's</a>,
-          <a href="https://www.youtube.com/user/Mrwhosetheboss" target="blank">Mrwhosetheboss</a> videos on youtube
+          charotar university of science and technology. I want to become a Full stack Developer. Always eager to learning new inspiring and interesting thing.
+          Also When I am not working either I play minecraft or I spent my time watching <a
+            href="https://www.youtube.com/user/LinusTechTips" target="blank">Linuses</a>, <a
+              href="https://www.youtube.com/user/duncan33303" target="blank">Austin's</a>,
+          <a href="https://www.youtube.com/user/Mrwhosetheboss" target="blank"> Mrwhosetheboss</a> videos on youtube
         </p>
       </div>
       <div class="circle xxlarge shade1"></div>

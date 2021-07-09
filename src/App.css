@@ -62,7 +62,7 @@ html::-webkit-scrollbar-track {
 	width: 100%vw;
 	height: 100vh;
 	display: flex;
-	background-color: #000;
+	background-color: #000066;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -83,7 +83,7 @@ html::-webkit-scrollbar-track {
 	left: 0;
 }
 .container h1::before {
-	background: #000;
+	background: #000066;
 	animation: typewriter 6s steps(32) 1s forwards;
 }
 .container h1::after {
@@ -106,7 +106,9 @@ html::-webkit-scrollbar-track {
 }
 .container svg {
 	position: absolute;
-	bottom: 1em;
+	bottom: 5em;
+	left: 50%;
+	transform: translateX(-50%);
 	fill: #fff;
 }
 .container a {
@@ -122,7 +124,7 @@ html::-webkit-scrollbar-track {
 .intro {
 	width: 100%;
 	height: 100vh;
-	background: #cc6600;
+	background: #000066;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -142,7 +144,7 @@ html::-webkit-scrollbar-track {
 }
 .intro .text .para a {
 	text-decoration: none;
-	color: #222;
+	color: #ff8000;
 	cursor: none;
 	transition: 0.5s ease;
 }
@@ -154,10 +156,9 @@ html::-webkit-scrollbar-track {
 		flex-direction: column;
 	}
 	.intro p {
-		color: #000;
+		color: #fff;
 	}
 	.intro .text .para a {
-		color: #3344ff;
 		cursor: pointer;
 	}
 }
@@ -389,9 +390,6 @@ html::-webkit-scrollbar-track {
 	.intro img {
 		margin-bottom: 2em;
 	}
-	.intro p {
-		color: #000;
-	}
 }
 @media screen and (max-width: 500px) {
 	.container h1 {
@@ -510,6 +508,10 @@ html::-webkit-scrollbar-track {
 	.projects h1 {
 		color: rgb(255, 255, 255);
 	}
+	.projects a,
+	.projects .gitlink {
+		cursor: pointer;
+	}
 }
 /* Project end */
 /* Contact start */
@@ -576,7 +578,7 @@ html::-webkit-scrollbar-track {
 	display: flex;
 	justify-content: space-between;
 }
-.contact button {
+.contact .button {
 	font-size: 1.5em;
 	padding: 0.5em 1em;
 	outline: none;
@@ -585,8 +587,9 @@ html::-webkit-scrollbar-track {
 	transition: 0.5s ease;
 	color: #ff8000;
 	font-weight: 500;
+	cursor: none;
 }
-.contact button:hover {
+.contact .button:hover {
 	color: #fff;
 	background: #ff8000;
 	cursor: none;
@@ -608,6 +611,7 @@ html::-webkit-scrollbar-track {
 .social .link a {
 	color: #fff;
 	transition: 0.5s ease;
+	cursor: none;
 }
 .social .link a:hover {
 	color: #000;
@@ -626,6 +630,16 @@ html::-webkit-scrollbar-track {
 		color: #fff;
 		margin-bottom: 0.125em;
 	}
+	.contact .contactform form input,
+	.contact .contactform form textarea {
+		cursor: auto;
+	}
+	.contact .button {
+		cursor: pointer;
+	}
+	.social .link a {
+		cursor: pointer;
+	}
 }
 /* Contact end */
 
@@ -634,4 +648,135 @@ html::-webkit-scrollbar-track {
 	align-items: center;
 	flex-wrap: wrap;
 	margin: 1em 0;
+}
+
+/* Navbar start */
+.Navbar {
+	display: flex;
+	height: 16vh;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 50px 0 100px;
+	flex-wrap: wrap;
+	background: transparent;
+	position: fixed;
+	z-index: 99;
+	top: 0;
+	transition: 0.3s ease;
+	font-family: "Open Sans", sans-serif;
+}
+.Navbar .logo {
+	display: flex;
+	align-items: center;
+}
+.Navbar .logo a {
+	text-decoration: none;
+	cursor: none;
+}
+.Navbar .logo h2 {
+	margin-left: 1em;
+	color: #fff;
+}
+.Navbar .logo span {
+	color: #4a39d0;
+}
+.Navbar .navlinks {
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+.Navbar .navlinks li {
+	margin: 0 5px;
+}
+.Navbar .navlinks li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 8px 15px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+	cursor: none;
+}
+.Navbar .navlinks li a.active,
+.Navbar .navlinks li a:hover {
+	color: #f7d01e;
+}
+.Navbar .menu-btn i {
+	color: #fff;
+	font-size: 22px;
+	cursor: pointer;
+	display: none;
+}
+input[type="checkbox"] {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	.Navbar {
+		padding: 0 40px 0 50px;
+	}
+}
+@media (max-width: 930px) {
+	.Navbar .menu-btn i {
+		display: block;
+	}
+	#click:checked ~ .menu-btn i:before {
+		content: "\f00d";
+	}
+	.Navbar .navlinks {
+		background: #000;
+		position: fixed;
+		top: 80px;
+		left: -100%;
+		height: 100vh;
+		width: 100%;
+		text-align: center;
+		display: block;
+		transition: all 0.3s ease;
+	}
+	#click:checked ~ .navlinks {
+		left: 0;
+	}
+	.Navbar .navlinks li {
+		width: 100%;
+		margin: 40px 0;
+	}
+	.Navbar .navlinks li a {
+		color: #fff;
+		width: 100%;
+		margin-left: -100%;
+		display: block;
+		font-size: 20px;
+		transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+	}
+	#click:checked ~ .navlinks li a {
+		margin-left: 0px;
+	}
+	.Navbar .navlinks li a.active,
+	.Navbar .navlinks li a:hover {
+		background: none;
+		color: #f7d01e;
+	}
+}
+@media screen and (max-width: 500px) {
+	.Navbar .logo a,
+	.Navbar .navlinks li a {
+		cursor: pointer;
+	}
+}
+.activeNav {
+	height: 12vh;
+	background-color: rgb(0, 0, 0);
+}
+.Navbar.active .logo h2,
+.Navbar.active .menu-btn i {
+	color: #fff;
+}
+#skill h1,
+#projects h1,
+#contact h1 {
+	margin-top: 12vh;
 }
