@@ -54,7 +54,7 @@ html::-webkit-scrollbar-track {
 	transform: scale(3);
 }
 .onImage {
-	transform: scale(15);
+	transform: scale(20);
 	mix-blend-mode: hue;
 }
 /* Custom cursor End */
@@ -119,6 +119,37 @@ html::-webkit-scrollbar-track {
 }
 .content p {
 	text-align: justify;
+}
+.sign {
+	position: absolute;
+	bottom: 0;
+	right: 8em;
+}
+.sign svg {
+	width: 10vw;
+	fill: #000066;
+}
+#sigenature {
+	stroke-dasharray: 595;
+	stroke-dashoffset: 595;
+	animation: sign 4s ease 7s forwards;
+}
+@keyframes sign {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+@media screen and (max-width: 500px) {
+	.sign {
+		bottom: -2em;
+		right: 4em;
+	}
+	.sign svg {
+		width: 20vw;
+	}
+	#sigenature {
+		animation-delay: 0.5s;
+	}
 }
 /* Intro Section Start */
 .intro {
