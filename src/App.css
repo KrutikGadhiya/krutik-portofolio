@@ -141,7 +141,7 @@ html::-webkit-scrollbar-track {
 }
 @media screen and (max-width: 500px) {
 	.sign {
-		bottom: -2em;
+		bottom: 0em;
 		right: 4em;
 	}
 	.sign svg {

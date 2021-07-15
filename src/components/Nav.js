@@ -1,11 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from 'react';
 
 export default function Nav() {
   useEffect(() => {
     const cursor = document.querySelector('.cursor');
     const logo = document.querySelector('.logo');
     const link = document.querySelectorAll('.navlinks li a');
-    const nav = document.querySelector(".Navbar")
+    const nav = document.querySelector(".Navbar");
 
     logo.addEventListener('mouseover', () => {
       cursor.classList.add('onHeading')
@@ -29,6 +29,7 @@ export default function Nav() {
         nav.classList.add("activeNav");
       }
     })
+
   })
   return (
     <nav className="Navbar">
@@ -40,11 +41,11 @@ export default function Nav() {
         <i className="fas fa-bars"></i>
       </label>
       <ul className="navlinks">
-        <li><a className="active" href="#">Home</a></li>
-        <li><a href="#introduction">Intro</a></li>
-        <li><a href="#skill">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact ME</a></li>
+        <li><a id="navhome" className="active" href="#">Home</a></li>
+        <li><a id="navintro" href="#introduction">Intro</a></li>
+        <li><a id="navskill" href="#skill">Skills</a></li>
+        <li><a id="navproj" href="#projects">Projects</a></li>
+        <li><a id="navcont" href="#contact">Contact ME</a></li>
       </ul>
     </nav>
   )
