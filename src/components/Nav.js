@@ -34,14 +34,14 @@ export default function Nav() {
   return (
     <nav className="Navbar">
       <div className="logo">
-        <a href="#"><h2>Krutik<span>Gadhiya</span></h2></a>
+        <a href="/"><h2>Krutik<span>Gadhiya</span></h2></a>
       </div>
       <input type="checkbox" id="click" />
       <label for="click" className="menu-btn">
         <i className="fas fa-bars"></i>
       </label>
       <ul className="navlinks">
-        <li><a id="navhome" className="active" href="#">Home</a></li>
+        <li><a id="navhome" href="/">Home</a></li>
         <li><a id="navintro" href="#introduction">Intro</a></li>
         <li><a id="navskill" href="#skill">Skills</a></li>
         <li><a id="navproj" href="#projects">Projects</a></li>

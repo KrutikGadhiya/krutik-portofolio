@@ -609,7 +609,8 @@ html::-webkit-scrollbar-track {
 	display: flex;
 	justify-content: space-between;
 }
-.contact .button {
+.contact .button,
+.projects .button {
 	font-size: 1.5em;
 	padding: 0.5em 1em;
 	outline: none;
@@ -620,10 +621,18 @@ html::-webkit-scrollbar-track {
 	font-weight: 500;
 	cursor: none;
 }
-.contact .button:hover {
+.contact .button:hover,
+.projects .button:hover {
 	color: #fff;
 	background: #ff8000;
 	cursor: none;
+}
+.projects .button {
+	background: #fff;
+	color: #3344ff;
+}
+.projects .button:hover {
+	background: #3344ff;
 }
 .contact .contactform form input:focus,
 .contact .contactform form textarea:focus {
@@ -800,7 +809,8 @@ input[type="checkbox"] {
 }
 .activeNav {
 	height: 12vh;
-	background-color: rgb(0, 0, 0);
+	/* background-color: rgba(0, 0, 0, 0.9); */
+	background-color: rgba(0, 0, 0, 0.9);
 }
 .Navbar.active .logo h2,
 .Navbar.active .menu-btn i {
