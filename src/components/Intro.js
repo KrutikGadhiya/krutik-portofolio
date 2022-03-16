@@ -27,7 +27,7 @@ export default function Intro() {
     <section id="introduction" class="intro">
       <img id="my-image" width="350px" src={myImage} alt="myimage" />
       <div class='text'>
-        <p class="para">Hello my name is krutik Gadhiya. I am a web developer currently persuing B-tech IT in
+        <p class="para intro-txt">Hello my name is krutik Gadhiya. I am a web developer currently persuing B-tech IT in
           charotar university of science and technology. I want to become a Full stack Developer. Always eager to learning new inspiring and interesting thing.
           Also When I am not working either I play minecraft or I spent my time watching <a
             href="https://www.youtube.com/user/LinusTechTips" target="blank">Linuses</a>, <a

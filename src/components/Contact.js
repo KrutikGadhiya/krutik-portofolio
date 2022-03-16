@@ -77,6 +77,9 @@ export default function Contact() {
           <a href="mailto:krutikgadhiya@gmail.com?subject=want+to+connect!&body=Hi." target="_blank" rel="noopener noreferrer"><i class="far fa-envelope"></i></a>
         </div>
         <div className="link">
+          <a href="https://medium.com/@krutikgadhiya" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-medium"></i></a>
+        </div>
+        <div className="link">
           <a href="https://www.linkedin.com/in/krutik-gadhiya-21a814190/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
         </div>
       </div>

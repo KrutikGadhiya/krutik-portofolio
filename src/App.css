@@ -173,6 +173,14 @@ html::-webkit-scrollbar-track {
 	margin: 0 2em;
 	text-align: justify;
 }
+.intro .text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.intro .intro-txt {
+	width: 60%;
+}
 .intro .text .para a {
 	text-decoration: none;
 	color: #ff8000;

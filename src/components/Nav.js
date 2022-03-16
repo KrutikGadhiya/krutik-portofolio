@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import resume from './Krutik_Resume.pdf'
 
 export default function Nav() {
   useEffect(() => {
@@ -46,6 +47,7 @@ export default function Nav() {
         <li><a id="navskill" href="#skill">Skills</a></li>
         <li><a id="navproj" href="#projects">Projects</a></li>
         <li><a id="navcont" href="#contact">Contact ME</a></li>
+        <li><a id="navcont" href={resume}>Resume</a></li>
       </ul>
     </nav>
   )
